@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CursoRepsitory extends JpaRepository<Curso, Long> {
+public interface CursoRepository extends JpaRepository<Curso, Long> {
     //@Query([instrução]) Somente se o nome não for semântico
     //[tipo de retorno] [nome do método] ([...parametros]);
 }

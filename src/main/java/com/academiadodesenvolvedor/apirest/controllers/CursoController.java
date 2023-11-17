@@ -3,7 +3,7 @@ package com.academiadodesenvolvedor.apirest.controllers;
 import com.academiadodesenvolvedor.apirest.dtos.CursoDTO;
 import com.academiadodesenvolvedor.apirest.exceptions.ResourceNotFoundException;
 import com.academiadodesenvolvedor.apirest.models.Curso;
-import com.academiadodesenvolvedor.apirest.repository.CursoRepsitory;
+import com.academiadodesenvolvedor.apirest.repository.CursoRepository;
 import com.academiadodesenvolvedor.apirest.requests.CreateCursoRequest;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +18,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/cursos")
 public class CursoController {
-    private final CursoRepsitory repository;
+    private final CursoRepository repository;
 
     @Autowired
-    public CursoController(CursoRepsitory repository) {
+    public CursoController(CursoRepository repository) {
         this.repository = repository;
     }
 
